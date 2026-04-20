@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0a0f1c;
-    color: white;
+    background: linear-gradient(135deg, #0a0f1c, #0f172a);
+    color: #e2e8f0;
     overflow-x: hidden;
 }
 
@@ -23,7 +23,7 @@ html {
     position: fixed;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 30% 30%, #3b82f6, transparent),
+    background: radial-gradient(circle at 30% 30%, #2563eb, transparent),
                 radial-gradient(circle at 70% 70%, #1e3a8a, transparent);
     animation: waveMove 12s infinite linear;
     z-index: -4;
@@ -33,13 +33,13 @@ html {
     50% { transform: translate(-20%, -20%); }
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 body::after {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(10,15,28,0.6);
+    background: rgba(10,15,28,0.75);
     z-index: -2;
 }
 
@@ -51,16 +51,13 @@ nav {
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px);
-    background: rgba(10,15,28,0.6);
+    background: rgba(15,23,42,0.6);
     z-index: 10;
 }
 
-/* NAV LINKS */
 .nav-links {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links li {
@@ -68,13 +65,13 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: #e2e8f0;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #3b82f6;
+    color: #60a5fa;
 }
 
 /* HERO */
@@ -87,23 +84,28 @@ nav {
 
 .hero-text h1 {
     font-size: 48px;
+    color: white;
 }
 
+.hero-text h3 {
+    color: #60a5fa;
+}
+
+.hero-text p {
+    color: #cbd5f5;
+}
+
+/* IMAGE */
 .hero-img img {
     width: 260px;
     border-radius: 50%;
-    border: 3px solid #3b82f6;
-    box-shadow: 0 0 30px #3b82f6;
-    animation: float 4s infinite;
-}
-
-@keyframes float {
-    50% { transform: translateY(-10px); }
+    border: 3px solid #60a5fa;
+    box-shadow: 0 0 25px #60a5fa;
 }
 
 /* BUTTONS */
 .btn {
-    background: #3b82f6;
+    background: #2563eb;
     padding: 12px 20px;
     border-radius: 6px;
     color: white;
@@ -111,9 +113,9 @@ nav {
 }
 
 .btn-outline {
-    border: 1px solid #3b82f6;
+    border: 1px solid #60a5fa;
     padding: 12px 20px;
-    color: #3b82f6;
+    color: #60a5fa;
     text-decoration: none;
 }
 
@@ -121,6 +123,12 @@ nav {
 .section {
     padding: 80px 50px;
     text-align: center;
+}
+
+/* GLASS */
+.glass {
+    background: rgba(30,41,59,0.6);
+    border-radius: 12px;
 }
 
 /* SKILLS */
@@ -133,34 +141,34 @@ nav {
 
 /* PROJECTS */
 .project-card {
-    background: rgba(30,41,59,0.6);
+    background: rgba(30,41,59,0.7);
     padding: 25px;
     margin: 20px auto;
     width: 60%;
-    border-radius: 15px;
-    transition: 0.4s;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px #3b82f6;
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #60a5fa;
 }
 
 /* CONTACT */
 .links a {
-    color: #3b82f6;
+    color: #60a5fa;
     margin: 10px;
 }
 
 /* CURSOR */
 .cursor {
     position: fixed;
-    width: 20px;
-    height: 20px;
-    background: #3b82f6;
+    width: 18px;
+    height: 18px;
+    background: #60a5fa;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6;
+    box-shadow: 0 0 20px #60a5fa;
     z-index: 9999;
 }
