@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #0a0f1c;
     color: white;
 }
@@ -10,7 +10,8 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background: #0d1326;
+    background: rgba(10,15,28,0.8);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
 }
@@ -27,6 +28,11 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3b82f6;
 }
 
 /* HERO */
@@ -35,40 +41,54 @@ nav ul li a {
     justify-content: space-around;
     align-items: center;
     padding: 80px 50px;
-    background: linear-gradient(to right, #0a0f1c, #0d1b3d);
-}
-
-.hero-text {
-    max-width: 500px;
+    background: radial-gradient(circle at top, #0d1b3d, #0a0f1c);
 }
 
 .hero-text h1 {
-    font-size: 40px;
+    font-size: 45px;
+}
+
+.hero-text h3 {
+    color: #3b82f6;
 }
 
 .hero-text p {
     color: #ccc;
 }
 
+/* IMAGE ANIMATION */
 .hero-img img {
-    width: 250px;
+    width: 260px;
     border-radius: 50%;
     border: 3px solid #3b82f6;
+    box-shadow: 0 0 25px #3b82f6;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 /* BUTTONS */
 .btn {
     background: #3b82f6;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
+    padding: 12px 20px;
     border-radius: 5px;
+    text-decoration: none;
+    color: white;
     margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
 }
 
 .btn-outline {
     border: 1px solid #3b82f6;
-    padding: 10px 20px;
+    padding: 12px 20px;
     color: #3b82f6;
     text-decoration: none;
     border-radius: 5px;
@@ -76,7 +96,7 @@ nav ul li a {
 
 /* SECTIONS */
 .section {
-    padding: 60px 50px;
+    padding: 70px 50px;
     text-align: center;
 }
 
@@ -87,24 +107,27 @@ nav ul li a {
     padding: 10px 15px;
     background: #1e293b;
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skill-tags span:hover {
+    background: #3b82f6;
 }
 
 /* PROJECTS */
 .project-card {
-    background: #1e293b;
+    background: rgba(30,41,59,0.6);
     margin: 20px auto;
-    padding: 20px;
+    padding: 25px;
     width: 60%;
-    border-radius: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
     transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card a {
-    color: #3b82f6;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 20px #3b82f6;
 }
 
 /* CONTACT */
