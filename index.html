@@ -11,17 +11,14 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <!-- Particles -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 </head>
 
-<body class="main-content">
+<body>
 
-<!-- BACKGROUND -->
 <div id="particles-js"></div>
 <div class="wave"></div>
-
-<!-- CURSOR -->
 <div class="cursor"></div>
 
 <!-- NAVBAR -->
@@ -43,13 +40,13 @@
         <p>Building intelligent solutions with modern technologies and innovative thinking.</p>
 
         <div class="buttons">
-            <a href="https://drive.google.com/file/d/1pu6TgTYdziwCOAZNeMe_CnbC7xjplWsb/view?usp=sharing" target="_blank" class="btn">View Resume</a>
+            <a href="https://drive.google.com/file/d/1pu6TgTYdziwCOAZNeMe_CnbC7xjplWsb/view" target="_blank" class="btn">View Resume</a>
             <a href="#contact" class="btn-outline">Contact Me</a>
         </div>
     </div>
 
     <div class="hero-img" data-aos="fade-left">
-        <img src="profile.jpg" alt="Gagan">
+        <img src="profile.jpg" alt="Profile">
     </div>
 </section>
 
@@ -60,7 +57,6 @@
         I am a Computer Science student specializing in Artificial Intelligence and Machine Learning.
         Passionate about learning new technologies, exploring modern tools, and working with emerging AI agents.
         I enjoy building innovative solutions that solve real-world problems.
-        My goal is to grow as a developer and contribute to impactful tech-driven projects.
     </p>
 </section>
 
@@ -111,29 +107,17 @@
 
 <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({ duration: 1200, once: true });
-</script>
+<script>AOS.init({ duration: 1200, once: true });</script>
 
 <!-- PARTICLES -->
 <script>
 particlesJS("particles-js", {
   particles: {
-    number: { value: 100 },
+    number: { value: 80 },
     size: { value: 3 },
     color: { value: "#3b82f6" },
     line_linked: { enable: true, color: "#3b82f6" },
     move: { speed: 2 }
-  },
-  interactivity: {
-    events: {
-      onhover: { enable: true, mode: "repulse" },
-      onclick: { enable: true, mode: "push" }
-    },
-    modes: {
-      repulse: { distance: 100 },
-      push: { particles_nb: 4 }
-    }
   }
 });
 </script>
