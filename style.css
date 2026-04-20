@@ -6,45 +6,41 @@ body {
     overflow-x: hidden;
 }
 
-/* ✅ PARTICLES - FULL BACKGROUND FIX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* PARTICLES */
 #particles-js {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    z-index: -3; /* pushed further back */
+    z-index: -3;
 }
 
-/* ✅ MAIN CONTENT ABOVE PARTICLES */
-.main-content {
-    position: relative;
-    z-index: 1;
+/* WAVE BACKGROUND */
+.wave {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, #3b82f6, transparent),
+                radial-gradient(circle at 70% 70%, #1e3a8a, transparent);
+    animation: waveMove 12s infinite linear;
+    z-index: -4;
 }
 
-/* ✅ EXTRA DARK OVERLAY FOR BETTER VISIBILITY */
+@keyframes waveMove {
+    50% { transform: translate(-20%, -20%); }
+}
+
+/* DARK OVERLAY */
 body::after {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(10,15,28,0.6); /* transparency layer */
-    top: 0;
-    left: 0;
+    background: rgba(10,15,28,0.6);
     z-index: -2;
-}
-
-/* GLOW BACKGROUND */
-body::before {
-    content: "";
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, #3b82f6, transparent);
-    top: -100px;
-    left: -100px;
-    filter: blur(120px);
-    z-index: -1;
 }
 
 /* NAVBAR */
@@ -54,9 +50,23 @@ nav {
     padding: 20px 50px;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     background: rgba(10,15,28,0.6);
     z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 /* HERO */
@@ -67,18 +77,10 @@ nav {
     padding: 100px 50px;
 }
 
-/* TEXT */
 .hero-text h1 {
     font-size: 48px;
-    animation: fadeIn 2s ease;
 }
 
-@keyframes fadeIn {
-    from {opacity:0; transform: translateY(20px);}
-    to {opacity:1; transform: translateY(0);}
-}
-
-/* IMAGE */
 .hero-img img {
     width: 260px;
     border-radius: 50%;
@@ -88,7 +90,7 @@ nav {
 }
 
 @keyframes float {
-    50% { transform: translateY(-10px);}
+    50% { transform: translateY(-10px); }
 }
 
 /* BUTTONS */
@@ -107,11 +109,10 @@ nav {
     text-decoration: none;
 }
 
-/* GLASS EFFECT */
-.glass {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+/* SECTIONS */
+.section {
+    padding: 80px 50px;
+    text-align: center;
 }
 
 /* SKILLS */
@@ -142,4 +143,17 @@ nav {
 .links a {
     color: #3b82f6;
     margin: 10px;
+}
+
+/* CURSOR */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px #3b82f6, 0 0 40px #3b82f6;
+    z-index: 9999;
 }
