@@ -7,15 +7,21 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- AOS Animation Library -->
+<!-- AOS Animation -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </head>
 
 <body>
 
+<!-- PARTICLES -->
+<div id="particles-js"></div>
+
 <!-- NAVBAR -->
-<nav>
+<nav id="navbar">
     <h2>Gagan</h2>
     <ul>
         <li><a href="#home">Home</a></li>
@@ -30,7 +36,7 @@
 <section id="home" class="hero">
 
     <div class="hero-text" data-aos="fade-right">
-        <h1>Sanagala Gagan</h1>
+        <h1 class="fade-in">Sanagala Gagan</h1>
         <h3>Aspiring Software Developer | AI Engineer | Frontend Enthusiast</h3>
         <p>Building intelligent solutions with modern technologies and innovative thinking.</p>
 
@@ -47,7 +53,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section" data-aos="fade-up">
+<section id="about" class="section glass" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
         I am a Computer Science student specializing in Artificial Intelligence and Machine Learning.
@@ -60,11 +66,6 @@
 <!-- SKILLS -->
 <section id="skills" class="section" data-aos="zoom-in">
     <h2>Skills</h2>
-    <p>
-        Strong foundation in programming and web development with hands-on experience in Python, Java, HTML, CSS, and JavaScript.
-        Skilled in Machine Learning and Artificial Intelligence with practical implementations.
-        Familiar with MySQL and Git for efficient development workflows.
-    </p>
 
     <div class="skill-tags">
         <span>Python</span>
@@ -85,17 +86,16 @@
 
     <div class="project-card" data-aos="fade-up">
         <h3>Smart Technician Service Platform</h3>
-        <p>A platform connecting customers with technicians for appliance repairs with real-time tracking.</p>
-        <p><b>Tech:</b> Python, Flask, MySQL, HTML, CSS, JS</p>
+        <p>Real-time technician service platform with admin dashboard and workflow automation.</p>
         <a href="https://saifix.onrender.com" target="_blank">View Project</a>
     </div>
 
     <div class="project-card" data-aos="fade-up">
         <h3>Food Waste Management System</h3>
-        <p>Secure system with authentication and Google OAuth for efficient waste management.</p>
-        <p><b>Tech:</b> HTML, CSS, JS, MySQL</p>
+        <p>Secure authentication system with Google OAuth and structured data handling.</p>
         <a href="https://wastemngt.infinityfree.me/waste_mngt/?i=2" target="_blank">View Project</a>
     </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -104,7 +104,6 @@
 
     <p>📞 9963338340</p>
     <p>📧 sanagalagagan@gmail.com</p>
-    <p>🎓 gs5318@srmist.edu.in</p>
 
     <div class="links">
         <a href="https://www.linkedin.com/in/gagan-sanagala-1b4a40337" target="_blank">LinkedIn</a>
@@ -112,12 +111,32 @@
     </div>
 </section>
 
-<!-- AOS Script -->
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({
-    duration: 1000,
-    once: true
+AOS.init({ duration: 1200, once: true });
+</script>
+
+<!-- PARTICLES CONFIG -->
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 100 },
+    size: { value: 3 },
+    color: { value: "#3b82f6" },
+    line_linked: { enable: true, color: "#3b82f6" },
+    move: { speed: 2 }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" }
+    },
+    modes: {
+      repulse: { distance: 100 },
+      push: { particles_nb: 4 }
+    }
+  }
 });
 </script>
 
